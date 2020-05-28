@@ -1,0 +1,292 @@
+@font-face {
+  font-family: Didot;
+  src: url(../fonts/Didot Regular.ttf);
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url(../fonts/Helvetica.ttf);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  z-index: -1;
+  max-width: 100vw;
+  margin: 0px;
+  overflow-x: hidden;
+  background-color: #000000;
+  font-family: Helvetica;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+li {
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+}
+
+/********** Banner **********/
+.banner {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 0px;
+  color: #ffffff;
+}
+
+.ban-left {
+  width: 50%;
+  height: 100%;
+  margin: 0px;
+  display: inline-block;
+  float: left;
+  background-image: url(../img/banner.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.ban-right {
+  width: 50%;
+  height: 100%;
+  margin: 0px;
+  display: inline-block;
+  float: right;
+  background: #000000;
+}
+
+.name {
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.name h1 {
+  font-size: 7em;
+  margin: 10px auto;
+  font-family: Didot;
+}
+
+.login {
+  text-align: center;
+  max-width: 100%;
+  margin: 10px auto;
+  padding: 0px;
+  font-family: Didot;
+}
+
+#login_logout
+{
+ 
+ font-size: 20px;
+text-align: left;
+}
+
+.raw {
+  margin: 0px;
+  width: 100%;
+  height: 50px;
+}
+
+.col {
+  margin-right: 10px;
+  max-width: 48%;
+  display: inline-block;
+}
+
+.reg {
+  margin: 10px;
+}
+
+.reg a {
+  color: #ffea00;
+}
+
+/********* Navbar **********/
+.nav {
+  height: 50px;
+  color: white;
+  background: black;
+  position: absolute;
+  z-index: 100;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  float: right;
+  border: solid white 2px;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #000000;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 20px 13px 20px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+#search {
+  margin: 0px;
+  width: 100%;
+  height: 0px;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+  z-index: 100;
+  position: relative;
+}
+
+#search input {
+  padding: 0px;
+  border: none;
+  margin: 0px;
+  width: calc(100% - 2px);
+  height: 100%;
+}
+
+/********** Welcome **********/
+.welcome {
+  margin: 0px;
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.welcome h2 {
+  margin: 10px;
+  text-align: center;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  color: #000000 !important;
+}
+
+/********** Content **********/
+.container {
+  width: 100%;
+  height: auto;
+  min-height: 80vh;
+  margin: 0px auto;
+  position: relative;
+  background-color: rgba(241, 188, 217, 0.7);
+  display: block;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  color: #ffffff;
+}
+
+@media (max-width:1000px) {
+  .ban-left {
+    display: none;
+  }
+
+  .ban-right {
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+  }
+}
+
+@media (max-width:720px) {
+  /********* Navbar **********/
+  .nav {
+    width: calc(100% - 4px);
+    display: block;
+  }
+
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(241, 188, 217, 0.5);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid gray;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #000000;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+}
+
+@media (max-width:540px) {
+  .name h1 {
+    font-size: 3em;
+  }
+
+  .welcome h2 {
+    font-size: 1em;
+  }
+}

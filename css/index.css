@@ -1,0 +1,88 @@
+.pic-wrapper {
+  min-width: 100%;
+  margin: 0px;
+  display: flex;
+  position: relative;
+}
+
+.pic-wrapper ul {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.pic-wrapper ul li {
+  width: 49%;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  vertical-align: top;
+}
+
+
+
+.pic {
+  width: 100%;
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+}
+
+.pic img {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.zutat {
+  width: 80%;
+  margin: 0px auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.zutat h1 {
+  font-size: 2em;
+  color: #d3e325;
+}
+
+.zutat p {
+  font-size: 1.5em;
+}
+
+.intro {
+  min-width: 80%;
+  height: auto;
+  margin: 0px;
+  padding: 50px;
+  display: block;
+  position: relative;
+  font-size: 1.2em;
+}
+
+#rezept ul {
+  display: block !important;
+}
+
+#rezept ul li {
+  width: 100% !important;
+  display: block !important;
+  margin: 1rem !important;
+  position: relative;
+}
+
+#rezept ul li:before {
+  content: ".";
+  padding-right: 8px;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.intro {
+  color: #ffffff;
+}
+
+@media (max-width:720px) {
+  .pic-wrapper ul li {
+    width: 100%;
+  }
+}

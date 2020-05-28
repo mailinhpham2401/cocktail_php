@@ -1,0 +1,16 @@
+#info {
+  padding: 50px;
+}
+
+#info li {
+  display: block;
+}
+
+.container {
+  background-image: none;
+  background-color: #000000;
+}
+
+a {
+  color: #ffea00;
+}
